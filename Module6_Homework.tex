@@ -1,0 +1,498 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Module6\_Homework.R},
+  pdfauthor={mmhan\_uricwmy},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Module6\_Homework.R}
+\author{mmhan\_uricwmy}
+\date{2022-08-08}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# =====================================================}
+\CommentTok{\# Module 6 Homework {-} Multivariate Linear Regression}
+\CommentTok{\#                     Supervised Modeling Technique}
+\CommentTok{\# Mike Hankinson}
+\CommentTok{\# =====================================================}
+\CommentTok{\# Background}
+\CommentTok{\# ...........}
+\CommentTok{\# This assignment will extend on the data on individuals from the city provided for }
+\CommentTok{\# assignment 5. }
+
+\CommentTok{\# In addition to jewelry spend and salary, you are provided with three additional }
+\CommentTok{\# independent variables that can potentially be added to the model. These are: }
+    \CommentTok{\# 1. Real\_Estate: Size of primary residence in square feet }
+    \CommentTok{\# 2. Stock: Amount of assets in stock portfolio in thousands of dollars }
+    \CommentTok{\# 3. Previous\_Spend: Amount of money spent on jewelry last year }
+
+\CommentTok{\# Questions}
+\CommentTok{\# ...........}
+\CommentTok{\# 1.  For each of the above predictors, create a multivariate linear models where you use that }
+\CommentTok{\#     variable and Salary to predict jewelry spend (3 models total, 2 predictors in each model). }
+\CommentTok{\#     For each model, comment if you think the new variable has been a helpful addition. }
+\CommentTok{\#     Say why or why not you think this is the case. }
+\CommentTok{\#     Interpret what you think this means for what metrics drive jewelry spend. }
+
+\CommentTok{\# 2.    Create a model using all four predictors. Use the step function to find the iteration }
+\CommentTok{\#     of the model with the lowest AIC. Do you agree that this is the best model? }
+\CommentTok{\#     Why or why not is this the case? Suggest a final model and interpret your findings. }
+ 
+\CommentTok{\# ********************************************************************    }
+\CommentTok{\# Question 1}
+\CommentTok{\# ********************************************************************}
+\CommentTok{\# Process}
+\CommentTok{\# \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\CommentTok{\# 1. Load data}
+\CommentTok{\# 2. Correlation}
+\CommentTok{\# 3. Build 3 Models with 2 Predictors}
+\CommentTok{\# 4. Compare the slope estimates, standard errors, T{-}statistics, and P{-}values}
+\CommentTok{\# 5. Compute and compare confidence intervals for B1 {-} T{-}Test}
+\CommentTok{\# 6. Conclusions}
+
+\CommentTok{\# 1. Load and Plot Data}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dat }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"Assignment6.csv"}\NormalTok{)}
+\FunctionTok{tail}\NormalTok{(dat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Jewelry    Salary Real_Estate      Stock Previous_Spend
+## 1195 515.7175 239.82144   3444.9582  220.87686       416.1842
+## 1196 500.1630  21.80696   1102.2118  161.81059       393.4209
+## 1197 502.3460  34.21831    650.8708  -11.19568       399.0107
+## 1198 513.0564 170.61613   2530.0507   64.51973       411.1606
+## 1199 491.7298  31.00569   1129.2175 -256.57608       394.2519
+## 1200 502.0566  27.01160   1036.1346 -231.17124       396.0227
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ***Note: Units of Data Columns***}
+\CommentTok{\# Jewelry             $      }
+\CommentTok{\# Salary              $M  (Thousands of dollars)  }
+\CommentTok{\# Real\_Estate         $M      }
+\CommentTok{\# Stock               $M }
+\CommentTok{\# Previous\_Spend      $}
+
+
+
+\CommentTok{\# 2. Correlation}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cor}\NormalTok{(dat)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                   Jewelry    Salary Real_Estate      Stock Previous_Spend
+## Jewelry        1.00000000 0.6269505   0.6089253 0.09441619     0.69961888
+## Salary         0.62695053 1.0000000   0.9405352 0.18624920     0.48080938
+## Real_Estate    0.60892527 0.9405352   1.0000000 0.16976733     0.45025567
+## Stock          0.09441619 0.1862492   0.1697673 1.00000000     0.08349586
+## Previous_Spend 0.69961888 0.4808094   0.4502557 0.08349586     1.00000000
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Positive correlations are seen in }
+\CommentTok{\# 1. Jewelry and Salary: 0.6269505}
+\CommentTok{\# 2. Jewelry and Real Estate: 0.6089253}
+\CommentTok{\# 3. Jewelry and Stock, minimally: 0.09441619}
+\CommentTok{\# 4. Jewelry and Previous Spend: 0.69961888}
+
+
+
+\CommentTok{\# 3. Build 3 Models with 2 Predictors}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Also, for comparision, build 4th model (from last week) with only 1 predictor (Salary)}
+\CommentTok{\# 3 Linear Models}
+\NormalTok{Jewelry.m1 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Jewelry }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Salary }\SpecialCharTok{+}\NormalTok{ Real\_Estate, dat)}
+\NormalTok{Jewelry.m2 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Jewelry }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Salary }\SpecialCharTok{+}\NormalTok{ Stock, dat)}
+\NormalTok{Jewelry.m3 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Jewelry }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Salary }\SpecialCharTok{+}\NormalTok{ Previous\_Spend, dat)}
+\NormalTok{Jewelry.base }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Jewelry }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Salary, dat)}
+
+\CommentTok{\# 4. Compare the slope estimates, standard errors, T{-}statistics, and P{-}values}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Obtain and Format Data from 3 Models}
+\NormalTok{Salary.Real\_Estate }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{summary}\NormalTok{(Jewelry.m1)}\SpecialCharTok{$}\NormalTok{coef[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{3}\NormalTok{,],}\DecValTok{3}\NormalTok{) }\CommentTok{\# round to 3 places}
+\NormalTok{Salary.Stock }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{summary}\NormalTok{(Jewelry.m2)}\SpecialCharTok{$}\NormalTok{coef[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{3}\NormalTok{,],}\DecValTok{3}\NormalTok{)}
+\NormalTok{Salary.Previous\_Spend }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{summary}\NormalTok{(Jewelry.m3)}\SpecialCharTok{$}\NormalTok{coef[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{3}\NormalTok{,],}\DecValTok{3}\NormalTok{)}
+\NormalTok{Base.Model.Salary.Only }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{summary}\NormalTok{(Jewelry.base)}\SpecialCharTok{$}\NormalTok{coef[}\DecValTok{2}\NormalTok{,],}\DecValTok{3}\NormalTok{)}
+
+
+\CommentTok{\# B1 Summary of 3 Individual Models}
+\NormalTok{Two.Predictor.models }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(Salary.Real\_Estate, Salary.Stock, Salary.Previous\_Spend, Base.Model.Salary.Only)}
+    \CommentTok{\#                     Estimate Std.   Error   t value     Pr(\textgreater{}|t|)}
+    \CommentTok{\# Salary                    0.053      0.007    7.109       0.000}
+    \CommentTok{\# Real\_Estate               0.002      0.001    2.524       0.012}
+      
+    \CommentTok{\# Salary                    0.071      0.003    27.555      0.000}
+    \CommentTok{\# Stock                    {-}0.001      0.001    {-}1.011      0.312}
+      
+    \CommentTok{\# Salary                    0.042      0.002    18.112      0.000}
+    \CommentTok{\# Previous\_Spend            0.480      0.019    24.819      0.000}
+      
+    \CommentTok{\# Base.Model.Salary.Only    0.070      0.003    27.854      0.000}
+
+    \CommentTok{\# {-} Note the 3 models are compared to the Base.Model which was performed last week as well. }
+    \CommentTok{\#   The base model, as shown above, only studies the influence of salary on annual jewelry }
+    \CommentTok{\#   spend.  It shows a B1 coefficient of $0.070 spend/$M Salary (per 1,000 salary) }
+    \CommentTok{\# {-} The B1s of Salary/Stock Model show a slight negative relationship (nearly no relationship)}
+    \CommentTok{\#   between Stock and Spend, with the balance tucked away under Salary ($0.071/$M Salary).}
+    \CommentTok{\#   This is also demonstrated in the large (\textgreater{} 0.001) Stock P{-}Value}
+    \CommentTok{\# {-} Interesting to note Previous\_Spend accounts for the majority of the slope within the }
+    \CommentTok{\#   Salary/Previous\_SPend model. This, in fact, understates the difference, as units are different}
+    \CommentTok{\#   between the 2 predictors {-}{-} }
+    \CommentTok{\#       * Salary in $spend/$M earned, 1:1,000}
+    \CommentTok{\#       * Previous\_Spend in $spend/$spend, 1:1}
+    \CommentTok{\# {-} We have introduced additional error into the 3 two{-}feature models. }
+    \CommentTok{\# {-} P{-}values for all but stock are \textless{} 0.001.  Meaning there appears to be a definitive relationship}
+    \CommentTok{\#   with the features in models 1 and 3 as well as the base model, 4.    }
+
+
+\CommentTok{\# 5. Compute and compare confidence intervals for B1 {-} T{-}Test}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Additional Information {-}{-}\textgreater{}}
+
+\NormalTok{two.predictor.models.confidence }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(}\AttributeTok{Salary.Real\_Estate=}\FunctionTok{confint}\NormalTok{(Jewelry.m1)[}\DecValTok{2}\NormalTok{,], }\AttributeTok{Salary.Stock=}\FunctionTok{confint}\NormalTok{(Jewelry.m2)[}\DecValTok{2}\NormalTok{,], }
+                                      \AttributeTok{Salary.Previous\_Spend =}\FunctionTok{confint}\NormalTok{(Jewelry.m3)[}\DecValTok{2}\NormalTok{,], }\AttributeTok{Base.Model.Salary.Only=}\FunctionTok{confint}\NormalTok{(Jewelry.base)[}\DecValTok{2}\NormalTok{,])}
+
+    \CommentTok{\#                           2.5 \%     97.5 \%}
+    \CommentTok{\# Salary.Real\_Estate     0.03804700 0.06705160      }
+    \CommentTok{\# Salary.Stock           0.06555450 0.07560510      }
+    \CommentTok{\# Salary.Previous\_Spend  0.03767883 0.04683357      }
+    \CommentTok{\# Base.Model.Salary.Only 0.06516019 0.07503500}
+
+
+
+\CommentTok{\# 6. Conclusions}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Is addition of the new variable a helpful addition to the model? Why or Why Not?}
+ 
+\CommentTok{\# {-} Model 1 {-} Jewelry\textasciitilde{}Salary+Real\_Estate: Maybe, Real Estate probably not a good variable to add to the model}
+\CommentTok{\#     + Good Positive Correlation, 0.6089253}
+\CommentTok{\#     + Not much to add in terms of slope B1, 0.002}
+\CommentTok{\#     + Large P{-}Value, 0.012}
+\CommentTok{\# {-} Model 2 {-} Jewelry\textasciitilde{}Salary+Stock: No, Stock is not a good variable to add to the model}
+\CommentTok{\#     + Minimal Correlation, 0.09441619}
+\CommentTok{\#     + Negative slope B1, {-}0.001 }
+\CommentTok{\#     + Large P{-}Value, 0.012}
+\CommentTok{\# {-} Model 3 {-} Jewelry\textasciitilde{}Salary+Previous\_Spend: Yes, Previous Spend is a good variable to add to the model}
+\CommentTok{\#     + Good Positive Correlation, 0.69961888.  Highest individual correlation (\textgreater{} Salary)}
+\CommentTok{\#     + Provides much of the slope with B1, 0.480}
+\CommentTok{\#     + P{-}Value \textless{} 0.001}
+\CommentTok{\#     + Tight confidence level...above 0.  }
+
+\CommentTok{\# Interpret what this means for what metrics drive jewelry spend. }
+\CommentTok{\# {-} Previous spend is a large predictor for future jewelry purchases.  This makes intuitive sense. }
+\CommentTok{\#   People who like jewelry will spend money time{-}and{-}again for new purchases.  }
+\CommentTok{\# {-} In addition, people who have a larger income have larger disposable money in which to spend}
+\CommentTok{\#   on jewelry purchases.  }
+\CommentTok{\# {-} Amount of stock and/or real estate value is not a good predictor for expenditure on jewelry. }
+
+
+
+\CommentTok{\# ********************************************************************    }
+\CommentTok{\# Question 2}
+\CommentTok{\# ********************************************************************}
+\CommentTok{\# Process}
+\CommentTok{\# \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+\CommentTok{\# 1. Build Model Using All Predictors Simultaneously}
+\CommentTok{\# 2. Use step() to discover the combination of predictors to produce the lowest AIC possible}
+\CommentTok{\# 3. Use step() to discover the combination of predictors to produce the lowest AIC possible }
+\CommentTok{\# 4. Conclusions}
+
+
+\CommentTok{\# 1. Build model using all predictors simultaneously }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Jewelry.m4 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Jewelry }\SpecialCharTok{\textasciitilde{}}\NormalTok{ ., dat) }\CommentTok{\# Joint model}
+    \CommentTok{\# Call:}
+    \CommentTok{\#   lm(formula = Jewelry \textasciitilde{} ., data = dat)}
+    \CommentTok{\# }
+    \CommentTok{\# Residuals:}
+    \CommentTok{\#   Min      1Q  Median      3Q     Max }
+    \CommentTok{\# {-}11.582  {-}2.142  {-}0.140   2.292  10.288 }
+    \CommentTok{\# }
+    \CommentTok{\# Coefficients:}
+    \CommentTok{\#               Estimate Std. Error     t value   Pr(\textgreater{}|t|)    }
+    \CommentTok{\# (Intercept)       3.069e+02  7.712e+00  39.794  \textless{} 2e{-}16 ***}
+    \CommentTok{\#   Salary          2.425e{-}02  6.127e{-}03   3.958    8e{-}05 ***}
+    \CommentTok{\#   Real\_Estate     1.626e{-}03  4.992e{-}04   3.258    0.00115 ** }
+    \CommentTok{\#   Stock          {-}5.631e{-}04  5.519e{-}04  {-}1.020    0.30778    }
+    \CommentTok{\# Previous\_Spend    4.806e{-}01  1.927e{-}02  24.933  \textless{} 2e{-}16 ***}
+    \CommentTok{\#   {-}{-}{-}}
+    \CommentTok{\#   Signif. codes:  0 \textquotesingle{}***\textquotesingle{} 0.001 \textquotesingle{}**\textquotesingle{} 0.01 \textquotesingle{}*\textquotesingle{} 0.05 \textquotesingle{}.\textquotesingle{} 0.1 \textquotesingle{} \textquotesingle{} 1}
+    \CommentTok{\# }
+    \CommentTok{\# Residual standard error: 3.282 on 1195 degrees of freedom}
+    \CommentTok{\# Multiple R{-}squared:  0.6032,  Adjusted R{-}squared:  0.6019 }
+    \CommentTok{\# F{-}statistic: 454.1 on 4 and 1195 DF,  p{-}value: \textless{} 2.2e{-}16}
+
+
+\NormalTok{All.Features.Model }\OtherTok{\textless{}{-}} \FunctionTok{round}\NormalTok{(}\FunctionTok{summary}\NormalTok{(Jewelry.m4)}\SpecialCharTok{$}\NormalTok{coef[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{5}\NormalTok{,],}\DecValTok{3}\NormalTok{)}
+    \CommentTok{\#               Estimate    Std. Error  t value   Pr(\textgreater{}|t|)}
+    \CommentTok{\# Salary            0.024      0.006    3.958     0.000}
+    \CommentTok{\# Real\_Estate       0.002      0.000    3.258     0.001}
+    \CommentTok{\# Stock            {-}0.001      0.001    {-}1.020    0.308}
+    \CommentTok{\# Previous\_Spend    0.481      0.019    24.933    0.000}
+
+
+\CommentTok{\# 2. Use step() to discover the combination of predictors to produce the lowest AIC possible}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# {-} Given a data set, the AIC value measures the quality of a model relative }
+\CommentTok{\#   to other models.}
+\CommentTok{\# {-} AIC is not measured on an absolute scale and the actual value of the metric }
+\CommentTok{\#   has little to no meaning.}
+\CommentTok{\# {-} AIC is only designed to be used as a relative metric to evaluate quality when }
+\CommentTok{\#   different fits are performed on the same response variable.}
+\CommentTok{\# {-} Do not rely on AIC to make determinations on which model is }
+\CommentTok{\#   better fit for independent problem statements that utilize different }
+\CommentTok{\#   data.}
+\CommentTok{\# {-} AIC values are not bounded by 0 and can be negative{-}models with }
+\CommentTok{\#   negative AIC represent a higher quality fit than models with }
+\CommentTok{\#   positive AIC.}
+\CommentTok{\# {-} Lower values are always preferred.}
+
+
+\CommentTok{\# 3. Use step() to discover the combination of predictors to produce the lowest AIC possible }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# {-} Avoids itterative approach of drop1() and add1()}
+\CommentTok{\# {-} At each iteration, the function will provide the AIC for the current model }
+\CommentTok{\#   and the corresponding AIC if we were to remove any predictors or add a }
+\CommentTok{\#   predictor not included back in.}
+
+\FunctionTok{step}\NormalTok{(Jewelry.m4, }\AttributeTok{direction=}\StringTok{"both"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Start:  AIC=2856.97
+## Jewelry ~ Salary + Real_Estate + Stock + Previous_Spend
+## 
+##                  Df Sum of Sq   RSS    AIC
+## - Stock           1      11.2 12880 2856.0
+## <none>                        12869 2857.0
+## - Real_Estate     1     114.3 12983 2865.6
+## - Salary          1     168.7 13037 2870.6
+## - Previous_Spend  1    6694.7 19563 3357.6
+## 
+## Step:  AIC=2856.01
+## Jewelry ~ Salary + Real_Estate + Previous_Spend
+## 
+##                  Df Sum of Sq   RSS    AIC
+## <none>                        12880 2856.0
+## + Stock           1      11.2 12869 2857.0
+## - Real_Estate     1     115.5 12995 2864.7
+## - Salary          1     162.9 13043 2869.1
+## - Previous_Spend  1    6698.9 19579 3356.5
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = Jewelry ~ Salary + Real_Estate + Previous_Spend, 
+##     data = dat)
+## 
+## Coefficients:
+##    (Intercept)          Salary     Real_Estate  Previous_Spend  
+##      3.068e+02       2.376e-02       1.635e-03       4.807e-01
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+    \CommentTok{\# Start:  AIC=2856.97}
+    \CommentTok{\# Jewelry \textasciitilde{} Salary + Real\_Estate + Stock + Previous\_Spend}
+    \CommentTok{\# }
+    \CommentTok{\# Df Sum of Sq   RSS    AIC}
+    \CommentTok{\# {-} Stock           1      11.2 12880 2856.0}
+    \CommentTok{\# \textless{}none\textgreater{}                        12869 2857.0}
+    \CommentTok{\# {-} Real\_Estate     1     114.3 12983 2865.6}
+    \CommentTok{\# {-} Salary          1     168.7 13037 2870.6}
+    \CommentTok{\# {-} Previous\_Spend  1    6694.7 19563 3357.6}
+    \CommentTok{\# }
+    \CommentTok{\# Step:  AIC=2856.01}
+    \CommentTok{\# Jewelry \textasciitilde{} Salary + Real\_Estate + Previous\_Spend}
+    \CommentTok{\# }
+    \CommentTok{\#                   Df Sum of Sq   RSS    AIC}
+    \CommentTok{\# \textless{}none\textgreater{}                        12880 2856.0}
+    \CommentTok{\# + Stock           1      11.2 12869 2857.0}
+    \CommentTok{\# {-} Real\_Estate     1     115.5 12995 2864.7}
+    \CommentTok{\# {-} Salary          1     162.9 13043 2869.1}
+    \CommentTok{\# {-} Previous\_Spend  1    6698.9 19579 3356.5}
+    \CommentTok{\# }
+    \CommentTok{\# Call:}
+    \CommentTok{\#   lm(formula = Jewelry \textasciitilde{} Salary + Real\_Estate + Previous\_Spend, }
+    \CommentTok{\#      data = dat)}
+    \CommentTok{\# }
+    \CommentTok{\# Coefficients:}
+    \CommentTok{\#   (Intercept)       Salary     Real\_Estate  Previous\_Spend  }
+    \CommentTok{\# 3.068e+02       2.376e{-}02       1.635e{-}03       4.807e{-}01  }
+
+\CommentTok{\# 4. Conclusions}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Do you agree that this is the best model? Why or why not?}
+\CommentTok{\# Suggest a final model and interpret your findings.}
+
+
+\CommentTok{\# {-} The model with the lowest AIC uses Salary, Previous\_Spend and }
+\CommentTok{\#   Real\_Estate as the best predictors for Jewelry Expenditure. }
+\CommentTok{\# {-} These all seem like reasonable predictors for Jewelry expenditure.  }
+\CommentTok{\# {-} As described above, Real\_Estate was a fringe option in the first models due to large P{-}Value (0.012) and it (B1) did }
+\CommentTok{\#   not add much to the overall slope of the model  }
+\CommentTok{\# {-} However, in the full features model, P{-}value for real estate was low (0.001) added little error,}
+\CommentTok{\#   solidifying it for inclusion in the final model.  }
+\CommentTok{\# {-} Final Model Recommendation: lm(formula = Jewelry \textasciitilde{} Salary + Real\_Estate + Previous\_Spend, data = dat)}
+
+
+
+
+
+
+\CommentTok{\# rm(list = ls())      Removes global environment}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
